@@ -1,0 +1,88 @@
+CREATE DATABASE IF NOT EXISTS kevinbsis3c;
+
+USE kevinbsis3c;
+
+CREATE TABLE IF NOT EXISTS students (
+		  StudentID INT NOT NULL PRIMARY KEY,
+		  FirstName VARCHAR(50) NOT NULL,
+		  LastName VARCHAR(50) NOT NULL,
+		  Course VARCHAR(50)NOT NULLkevinbsis3c
+);
+CREATE TABLE IF NOT EXISTS department (
+		  DepartmentID INT NOT NULL PRIMARY KEY,
+		  DepartmentName VARCHAR(50) NOT NULL
+);
+CREATE TABLE IF NOT EXISTS teacher (
+		  TeacherID INT NOT NULL PRIMARY KEY,
+		  TeacherName VARCHAR(50) NOT NULL
+);
+CREATE TABLE IF NOT EXISTS schedule (
+		  ScheduleNumber INT NOT NULL PRIMARY KEY,
+		  StudentID VARCHAR(50) NOT NULL,
+		  TeacherID VARCHAR(50) NOT NULL,
+		  ScheduleDate VARCHAR(50) NOT NULL	
+);
+
+INSERT INTO Students (StudentID, FirstName, LastName, Course)
+VALUES ('102', 'maynard', 'penduko', 'ACR-2A')
+
+INSERT INTO Students (StudentID, FirstName, LastName, Course)
+VALUES ('103', 'kebs', 'chan', 'BSIS-3C')
+
+INSERT INTO Students (StudentID, FirstName, LastName, Course)
+VALUES ('103', 'kebs', 'cy', 'BSIS-3C')
+
+INSERT INTO Students (StudentID, FirstName, LastName, Course)
+VALUES ('103', 'cy', 'robles', 'BSIS-3C')
+
+INSERT INTO department (DepartmentID, DepartmentName)
+VALUES ('2', 'Education ')
+
+INSERT INTO department (DepartmentID, DepartmentName)
+VALUES ('3', 'Engineering')
+
+INSERT INTO department (DepartmentID, DepartmentName)
+VALUES ('4', 'Biology ')
+
+INSERT INTO teacher (TeacherID, TeacherName)
+VALUES ('T001', 'Glyyza Olivar')
+
+INSERT INTO teacher (TeacherID, TeacherName)
+VALUES ('T002', 'Joy Cerillo')
+
+INSERT INTO teacher (TeacherID, TeacherName)
+VALUES ('T003', 'Leo Nanteza ')
+
+INSERT INTO schedule (id, ScheduleID, StudentID, TeacherID, Date)
+VALUES ('1', 'N001', 'S001', 'T001', '2025-09-01')
+
+INSERT INTO schedule (id, ScheduleID, StudentID, TeacherID, Date)
+VALUES ('2', 'N002', 'S002', 'T002', '2025-09-02')
+
+INSERT INTO schedule (id, ScheduleID, StudentID, TeacherID, Date)
+VALUES ('3', 'N003', 'S003', 'T003', '2025-09-03')
+ 
+
+UPDATE students SET username = 'may'
+WHERE StudentID = '102';
+
+UPDATE students SET password = 'may123'
+WHERE StudentID = '102';
+
+UPDATE students SET username = 'chan'
+WHERE StudentID = '103';
+
+UPDATE students SET password = 'chan123'
+WHERE StudentID = '103';
+
+UPDATE students SET username = 'kebs'
+WHERE StudentID = '104';
+
+UPDATE students SET password = 'kebs123'
+WHERE StudentID = '104';
+
+UPDATE students SET username = 'cy'
+WHERE StudentID = '105';
+
+UPDATE students SET password = 'cy'
+WHERE StudentID = '105'
